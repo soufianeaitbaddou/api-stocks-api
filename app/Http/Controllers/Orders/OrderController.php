@@ -4,8 +4,8 @@ namespace App\Http\Controllers\orders;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderResource;
-use App\order;
-use App\client;
+use App\Order;
+use App\Client;
 use Illuminate\Http\Request;
 
 class orderController extends Controller
@@ -13,6 +13,7 @@ class orderController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * 
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -54,6 +55,7 @@ class orderController extends Controller
      */
     public function show($id)
     {
+        //p
         $order = Order::findOrFail($id);
         return new OrderResource($order);
     }
